@@ -109,7 +109,7 @@ export function LionHero() {
         {/* Texto gigante detrás */}
         <h1
           className="pointer-events-none absolute inset-x-0 top-1/2 z-0 -translate-y-1/2 select-none text-center font-display uppercase leading-[0.82]"
-          style={{ transform: "translate3d(var(--px,0),calc(-50% + var(--py,0px)),0)" }}
+          style={{ transform: "translate(var(--px,0px),calc(-50% + var(--py,0px)))" }}
         >
           <span className="block overflow-hidden"><span className="rise-in block text-[13vw] text-outline">Potenciá</span></span>
           <span className="block overflow-hidden"><span className="rise-in block text-[13vw] text-gold" style={{ animationDelay: "0.12s" }}>tu versión</span></span>
