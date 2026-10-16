@@ -120,6 +120,7 @@ export function LionHero() {
           className="lion-in relative z-10 aspect-square w-[min(78vw,640px)] will-change-transform"
           style={{ transform: "rotateX(var(--rx,0)) rotateY(var(--ry,0))", animationDelay: "0.3s" }}
         >
+          <div className="absolute inset-[8%] rounded-full" style={{ background: "radial-gradient(closest-side, var(--background) 55%, transparent)" }} />
           {[lionRight, lionLeft].map((img, i) => (
             <img
               key={img.url}
