@@ -93,7 +93,7 @@ export function LionHero() {
       {/* Barra superior */}
       <header className="relative z-30 flex items-center justify-between px-6 py-5 md:px-12">
         <a href="/" className="flex items-center gap-3">
-          <img src={logo.url} alt="STYLO" className="h-10 w-auto mix-blend-screen" />
+          <img src={logo.url} alt="STYLO" className="h-10 w-auto" />
           <span className="font-display text-xl tracking-[0.2em]">STYLO</span>
         </a>
         <nav className="hidden gap-10 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground md:flex">
@@ -111,8 +111,8 @@ export function LionHero() {
           className="pointer-events-none absolute inset-x-0 top-1/2 z-0 -translate-y-1/2 select-none text-center font-display uppercase leading-[0.82]"
           style={{ transform: "translate3d(var(--px,0),calc(-50% + var(--py,0px)),0)" }}
         >
-          <span className="block overflow-hidden"><span className="rise-in block text-[18vw] text-outline">Potenciá</span></span>
-          <span className="block overflow-hidden"><span className="rise-in block text-[18vw] text-gold" style={{ animationDelay: "0.12s" }}>tu versión</span></span>
+          <span className="block overflow-hidden"><span className="rise-in block text-[13vw] text-outline">Potenciá</span></span>
+          <span className="block overflow-hidden"><span className="rise-in block text-[13vw] text-gold" style={{ animationDelay: "0.12s" }}>tu versión</span></span>
         </h1>
 
         {/* León */}
@@ -126,7 +126,7 @@ export function LionHero() {
               src={img.url}
               alt={i === 0 ? "León STYLO" : ""}
               aria-hidden={i === 1}
-              className="absolute inset-0 h-full w-full object-contain mix-blend-screen transition-opacity duration-700"
+              className="absolute inset-0 h-full w-full object-contain transition-opacity duration-700"
               style={{ opacity: (i === 1) === facingLeft ? 1 : 0 }}
             />
           ))}
