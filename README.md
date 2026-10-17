@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Protein Powerhouse Hub
+
+Estoy construyendo un sitio web de suplementos proteicos como proteína, creatina y demás, y estoy haciendo un banner en la parte del hero animado. Te voy a pasar una captura y quiero que me ayudes a mejorarlo y darme alguna idea para yo poder implementarlo en el proyecto, ¿te parece?
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b0b608f9-3e80-446b-a05f-912c57bdf971).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
