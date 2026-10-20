@@ -1,3 +1,4 @@
+import { GoalPicker } from "@/components/GoalPicker";
 import { createFileRoute } from "@tanstack/react-router";
 import { LionHero } from "@/components/LionHero";
 import { ProductReveal } from "@/components/ProductReveal";
@@ -19,6 +20,7 @@ function Index() {
     <main>
       <LionHero />
       <ProductReveal />
+      <GoalPicker />
     </main>
   );
 }
