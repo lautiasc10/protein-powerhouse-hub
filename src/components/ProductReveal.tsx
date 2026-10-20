@@ -110,14 +110,14 @@ export function ProductReveal() {
           </div>
 
           {/* Derecha */}
-          <div className="order-3 grid grid-cols-2 gap-px overflow-hidden rounded-sm border border-border bg-border">
+          <div className="order-3 grid grid-cols-2 gap-3">
             {STATS.map((s, i) => (
-              <div key={s.l} className="bg-background p-5" style={reveal(0.6 + i * 0.04)}>
+              <div key={s.l} className="rounded-sm border border-border bg-card p-5" style={reveal(0.6 + i * 0.04)}>
                 <div className="font-display text-4xl text-gold">{s.v}</div>
                 <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{s.l}</div>
               </div>
             ))}
-            <a href="#" className="col-span-2 bg-primary p-5 text-center text-xs font-bold uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-gold-light" style={reveal(0.8)}>
+            <a href="#" className="col-span-2 rounded-sm bg-primary p-5 text-center text-xs font-bold uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-gold-light" style={reveal(0.8)}>
               Comprar ahora
             </a>
           </div>
