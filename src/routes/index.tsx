@@ -1,4 +1,5 @@
 import { GoalPicker } from "@/components/GoalPicker";
+import { ProductRail, ComboBuilder, WhyStylo, Brands, Reviews, Faq, ClubCta } from "@/components/StoreSections";
 import { createFileRoute } from "@tanstack/react-router";
 import { LionHero } from "@/components/LionHero";
 import { ProductReveal } from "@/components/ProductReveal";
@@ -21,6 +22,13 @@ function Index() {
       <LionHero />
       <ProductReveal />
       <GoalPicker />
+      <ProductRail />
+      <ComboBuilder />
+      <WhyStylo />
+      <Brands />
+      <Reviews />
+      <Faq />
+      <ClubCta />
     </main>
   );
 }
