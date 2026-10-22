@@ -1,5 +1,6 @@
 import { GoalPicker } from "@/components/GoalPicker";
-import { ProductRail, ComboBuilder, WhyStylo, Brands, Reviews, Faq, ClubCta } from "@/components/StoreSections";
+import { NewArrivals, GoalCombos, AthleteProgram } from "@/components/MoreSections";
+import { WhyStylo, Brands, Reviews, Faq, ClubCta } from "@/components/StoreSections";
 import { createFileRoute } from "@tanstack/react-router";
 import { LionHero } from "@/components/LionHero";
 import { ProductReveal } from "@/components/ProductReveal";
@@ -11,6 +12,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Proteínas, creatinas y pre-entrenos de las mejores marcas. Envíos a todo el país." },
       { property: "og:title", content: "STYLO Suplementos — Potenciá tu mejor versión" },
       { property: "og:description", content: "Proteínas, creatinas y pre-entrenos de las mejores marcas." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -22,11 +25,12 @@ function Index() {
       <LionHero />
       <ProductReveal />
       <GoalPicker />
-      <ProductRail />
-      <ComboBuilder />
+      <NewArrivals />
+      <GoalCombos />
       <WhyStylo />
       <Brands />
       <Reviews />
+      <AthleteProgram />
       <Faq />
       <ClubCta />
     </main>
