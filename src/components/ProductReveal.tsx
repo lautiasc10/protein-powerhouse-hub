@@ -131,7 +131,7 @@ export function ProductReveal() {
               <div className="relative order-1 flex justify-center md:order-2">
                 <span className="text-outline absolute -top-6 right-0 font-display text-[9rem] leading-none md:text-[14rem]" style={{ opacity: `calc(var(--v${i}, 0) * 0.6)` }}>{t.rank}</span>
                 <img src={t.img} alt={`${t.name} ${t.accent} ${t.brand}`} loading="lazy"
-                  className="relative w-[min(55vw,340px)] will-change-transform"
+                  className="relative w-[min(55vw,340px)] mix-blend-lighten will-change-transform"
                   style={{
                     opacity: `var(--v${i}, 0)`,
                     transform: `translateY(calc((1 - var(--v${i}, 0)) * 60px)) scale(calc(0.85 + var(--v${i}, 0) * 0.15))`,

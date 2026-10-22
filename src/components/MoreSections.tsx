@@ -51,7 +51,7 @@ export function NewArrivals() {
             <article key={p.name} className="group relative w-[75vw] shrink-0 sm:w-[380px]" style={{ marginTop: i % 2 ? 80 : -80 }}>
               <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-background">
                 <span className="text-outline absolute -left-2 -top-4 font-display text-[8rem] leading-none opacity-40">0{i + 1}</span>
-                <img src={p.img} alt={p.name} loading="lazy" className="relative h-full w-full object-contain p-8 transition-transform duration-700 group-hover:scale-105" />
+                <img src={p.img} alt={p.name} loading="lazy" className="relative h-full w-full object-contain p-8 mix-blend-lighten transition-transform duration-700 group-hover:scale-105" />
                 <span className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">Nuevo</span>
               </div>
               <div className="mt-4 flex items-end justify-between">
