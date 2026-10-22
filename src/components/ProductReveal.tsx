@@ -26,6 +26,7 @@ export function ProductReveal() {
     const ctx = cv.getContext("2d")!;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const n = window.matchMedia("(pointer: fine)").matches ? 220 : 90;
+    const layers = el.querySelectorAll<HTMLElement>("[data-layer]");
     let w = 0, h = 0, raf = 0, p = 0, shown = -1;
 
     const pts = Array.from({ length: n }, () => {
@@ -53,7 +54,9 @@ export function ProductReveal() {
           const li = p * N - i;
           const vin = clamp((li - 0.3) * 5);
           const vout = i === N - 1 ? 1 : clamp((0.95 - li) * 8);
-          el.style.setProperty(`--v${i}`, (vin * vout).toFixed(4));
+          const v = vin * vout;
+          el.style.setProperty(`--v${i}`, v.toFixed(4));
+          const ly = layers[i]; if (ly) ly.style.pointerEvents = v > 0.5 ? "auto" : "none";
         }
         el.style.setProperty("--p", p.toFixed(4));
         ctx.clearRect(0, 0, w, h);
@@ -111,7 +114,7 @@ export function ProductReveal() {
         </div>
 
         {TOP.map((t, i) => (
-          <div key={t.rank} className="absolute inset-0 flex items-center" style={{ pointerEvents: "none" }}>
+          <div key={t.rank} data-layer className="pointer-events-none absolute inset-0 flex items-center">
             <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-6 pt-28 md:grid-cols-[1fr_auto_1fr] md:gap-8 md:px-12 md:pt-0">
               <div className="order-2 md:order-1">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary" style={rv(i, 0)}>N.º {t.rank} · {t.brand}</p>
@@ -136,14 +139,14 @@ export function ProductReveal() {
                   }} />
               </div>
 
-              <div className="order-3 grid grid-cols-2 gap-3" style={{ pointerEvents: `var(--pe${i}, auto)` as never }}>
+              <div className="order-3 grid grid-cols-2 gap-3">
                 {t.stats.map((s, k) => (
                   <div key={s.l} className="rounded-sm border border-border bg-card p-4 md:p-5" style={rv(i, k)}>
                     <div className="font-display text-3xl text-gold md:text-4xl">{s.v}</div>
                     <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{s.l}</div>
                   </div>
                 ))}
-                <div className="col-span-2 flex items-center justify-between gap-4 rounded-sm border border-primary/40 bg-card p-4" style={{ ...rv(i, 4), pointerEvents: "auto", visibility: `var(--v${i}) ` as never }}>
+                <div className="col-span-2 flex items-center justify-between gap-4 rounded-sm border border-primary/40 bg-card p-4" style={{ ...rv(i, 4) }}>
                   <span className="font-display text-3xl">{fmt(t.price)}</span>
                   <a href="#" className="rounded-sm bg-primary px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-gold-light">+ Agregar</a>
                 </div>
