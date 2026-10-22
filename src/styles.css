@@ -144,3 +144,7 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+@keyframes curtain { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.curtain { animation: curtain 0.8s cubic-bezier(0.7, 0, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .curtain { animation: none; } }
